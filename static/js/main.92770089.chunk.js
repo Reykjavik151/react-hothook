@@ -1,2 +1,0 @@
-(this["webpackJsonpreact-hothook-example"]=this["webpackJsonpreact-hothook-example"]||[]).push([[0],[,,,function(e,t,n){e.exports=n(10)},function(e,t,n){},,,,,function(e,t,n){},function(e,t,n){"use strict";n.r(t);n(4);var o=n(0),a=n.n(o),c=n(2),r=n.n(c);n(9);var u=()=>null;r.a.render(a.a.createElement(u,null),document.getElementById("root"))}],[[3,1,2]]]);
-//# sourceMappingURL=main.92770089.chunk.js.map
