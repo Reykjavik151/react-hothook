@@ -1,6 +1,6 @@
 {
   "name": "react-hothook",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Outstanding set of React hooks",
   "author": "Reykjavik151",
   "license": "MIT",
@@ -14,12 +14,7 @@
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
-    "test": "run-s test:unit test:lint test:build",
-    "test:build": "run-s build",
-    "test:lint": "eslint .",
-    "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
-    "test:watch": "react-scripts test --env=jsdom",
-    "deploy": "run-s build"
+    "lint": "eslint ."
   },
   "peerDependencies": {
     "lodash": "^4.17.21",
