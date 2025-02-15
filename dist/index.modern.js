@@ -156,6 +156,21 @@ var useCountdown = function useCountdown(_ref) {
   };
 };
 
+var useDebouncedCallback = function useDebouncedCallback(callback, dependencies, delay) {
+  var timeoutRef = useRef(null);
+  return useCallback(function () {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = setTimeout(function () {
+      callback.apply(null, args);
+    }, delay);
+  }, [].concat(dependencies, [delay]));
+};
+
 var useDebouncedValue = function useDebouncedValue(value, delay) {
   var _useState = useState(value),
     debouncedValue = _useState[0],
@@ -285,5 +300,5 @@ var useToggle = function useToggle(defaultValue) {
   return [isValue, toggleValue];
 };
 
-export { useAsync, useCached, useCountdown, useDebouncedValue, useDeepCompareEffect, useFetch, useMount, usePrevious, useSpecificKeyExtractor, useStateWithCached, useStateWithPrevious, useStateWithValidation, useToggle, useUpdateEffect };
+export { useAsync, useCached, useCountdown, useDebouncedCallback, useDebouncedValue, useDeepCompareEffect, useFetch, useMount, usePrevious, useSpecificKeyExtractor, useStateWithCached, useStateWithPrevious, useStateWithValidation, useToggle, useUpdateEffect };
 //# sourceMappingURL=index.modern.js.map

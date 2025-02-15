@@ -1,6 +1,7 @@
 export * from './useAsync';
 export * from './useCached';
 export * from './useCountdown';
+export * from './useDebouncedCallback';
 export * from './useDebouncedValue';
 export * from './useDeepCompareEffect';
 export * from './useFetch';

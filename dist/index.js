@@ -156,6 +156,21 @@ var useCountdown = function useCountdown(_ref) {
   };
 };
 
+var useDebouncedCallback = function useDebouncedCallback(callback, dependencies, delay) {
+  var timeoutRef = react.useRef(null);
+  return react.useCallback(function () {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = setTimeout(function () {
+      callback.apply(null, args);
+    }, delay);
+  }, [].concat(dependencies, [delay]));
+};
+
 var useDebouncedValue = function useDebouncedValue(value, delay) {
   var _useState = react.useState(value),
     debouncedValue = _useState[0],
@@ -288,6 +303,7 @@ var useToggle = function useToggle(defaultValue) {
 exports.useAsync = useAsync;
 exports.useCached = useCached;
 exports.useCountdown = useCountdown;
+exports.useDebouncedCallback = useDebouncedCallback;
 exports.useDebouncedValue = useDebouncedValue;
 exports.useDeepCompareEffect = useDeepCompareEffect;
 exports.useFetch = useFetch;
