@@ -30,7 +30,7 @@
   - [`useAsync`](./docs/useAsync.md) &mdash; provides a functionality for async functions
   - [`useCached`](./docs/useCached.md) &mdash; saves only not empty, not undefined and not null values
   - [`useCountdown`](./docs/useCountdown.md) &mdash; manages a customizable countdown timer with lifecycle events, including pause, resume, reset, and update capabilities
-  - [`useDebounceCallback`](./docs/useDebouncedCallback.md) &mdash; provides debounced modification for default react's useCallback
+  - [`useDebouncedCallback`](./docs/useDebouncedCallback.md) &mdash; provides debounced modification for default react's useCallback
   - [`useDebouncedValue`](./docs/useDebouncedValue.md) &mdash; debounces a value, updating it only after a specified delay to optimize performance and prevent frequent updates
   - [`useDeepCompareEffect`](./docs/useDeepCompareEffect.md) &mdash; runs an effect only when the dependencies change based on a deep comparison using lodash's isEqual function, avoiding unnecessary executions caused by shallow comparison of complex objects or arrays
   - [`useFetch`](./docs/useFetch.md) &mdash; simplifies data fetching by combining the Fetch API with the useAsync hook, providing reactive state management for data, error, and isLoading
