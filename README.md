@@ -10,11 +10,6 @@
     </a>
   </h1>
     Set of optimized <a href="https://reactjs.org/docs/hooks-intro.html">React Hooks</a>.</em>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
   <sup>
     <br />
     <br />
